@@ -76,7 +76,7 @@ function solution(N, stages) {
     return answer;
 }
 
-console.log(solution(4, [4, 4, 4,4, 4, 4]));
+console.log(solution(4,[4,4,4,4,4,4]));
 
 
 // end of Q2
