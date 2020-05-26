@@ -35,22 +35,21 @@ console.log(solution(["Enter uid1234 Muzi","Enter uid4567 Prodo","Leave uid1234"
 // End Of Q1
 --------------------
 // Q2
-
-function solution(N, stages) {
+function solution(N, users) {
     let answer = [];
     let failRateArray = [];
-    let stagesSize = stages.length;
+    let userLength = users.length;
         
     for (let i = 1; i <= N; i++) {
         let top = 0;
         let bottom = 0;
         
-        for (let j = 0; j < stagesSize; j++) {
-            if (stages[j] === i) {
+        for (let j = 0; j < userLength; j++) {
+            if (users[j] === i) {
                 top++;
                 bottom++;
             }
-            else if (stages[j] > i) {
+            else if (users[j] > i) {
                 bottom++;
             }
         }
@@ -76,8 +75,7 @@ function solution(N, stages) {
     return answer;
 }
 
-console.log(solution(4,[4,4,4,4,4,4]));
-
+console.log(solution(4, [4, 4, 4,4, 4, 4]));
 
 // end of Q2
 --------------------
